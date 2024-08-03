@@ -1,0 +1,14 @@
+.educational-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.educational-history li {
+    margin-bottom: 10px;
+}
+
+.educational-history p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}

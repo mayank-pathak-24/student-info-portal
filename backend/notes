@@ -1,0 +1,9 @@
+npm init
+install express
+require express
+make app using express
+
+
+install nodemon
+intall dotenv
+instal axios in frontend

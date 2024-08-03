@@ -1,0 +1,14 @@
+.enrolled-courses ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.enrolled-courses li {
+    margin-bottom: 10px;
+}
+
+.enrolled-courses p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}

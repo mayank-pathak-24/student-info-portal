@@ -1,0 +1,21 @@
+.home-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+.personal-info, .educational-history, .enrolled-courses {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
