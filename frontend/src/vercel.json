@@ -1,7 +1,0 @@
-{
-    "rewrites": [
-      { "source": "/api/(.*)", "destination": "/api/$1" },  // This is optional if you have API routes
-      { "source": "/(.*)", "destination": "/index.html" }
-    ]
-  }
-  
