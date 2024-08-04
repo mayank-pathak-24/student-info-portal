@@ -6,8 +6,11 @@ const studentRouter=require('./routes/student.routes.js')
 const cors= require("cors")
 
 const app =express()
-app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: '*', // Adjust this to your needs
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 connectDB()
 .then(()=>{
