@@ -1,4 +1,4 @@
-const API_BASE_URL=process.env.REACT_APP_BACKEND_URL||"http://localhost:5010"
+const API_BASE_URL=import.meta.env.REACT_APP_BACKEND_URL||"http://localhost:5010"
 
 export default{
     login:`${API_BASE_URL}/login`,
