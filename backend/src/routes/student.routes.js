@@ -5,8 +5,15 @@ const Educational=require('../models/EducationalSchema.model.js')
 const Course=require('../models/CourseSchema.model.js')
 const router=express.Router()
 
+router.use(express.json())
 router.post('/signup',async(req,res)=>{
     const {name,email,age,contactNumber,password}=req.body ||{};
+    if(!name||!email||!age||!contactNumber||!password)
+    {
+        return res.status(400).json({error:'All fiels are required'})
+    }
+    if(typeof age !=='number')
+        return res.status(400).json({error:'Age must be a number'})
     try{
         const studentAdded=await Student.create({
             name:name,
