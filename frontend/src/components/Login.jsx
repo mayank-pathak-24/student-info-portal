@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
+import apiConfig from '../config/apiConfig';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -12,7 +13,7 @@ const Login = () => {
         e.preventDefault();
         try {
             const user = { email, password };
-            const response = await fetch("http://localhost:5010/login", {
+            const response = await fetch(apiConfig.login, {
                 method: "POST",
                 body: JSON.stringify(user),
                 headers: {
@@ -31,7 +32,7 @@ const Login = () => {
                 console.log();
                 
                 
-                const detailsResponce=await fetch(`http://localhost:5010/user-details?email=${userEmail}`)
+                const detailsResponce=await fetch(`${apiConfig.userDetails}?email=${userEmail}`)
                 const userDetails=await detailsResponce.json();
 
                // const courseResponce=await fetch('http://localhost:5010/course-info')

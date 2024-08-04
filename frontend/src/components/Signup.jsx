@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './Signup.css'; // Import your custom CSS file
+import apiConfig from '../config/apiConfig';
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -14,7 +15,7 @@ const Signup = () => {
     e.preventDefault();
     const addUser = { name, email, contactNumber, age, password };
     try {
-      const response = await fetch("http://localhost:5010/signup", {
+      const response = await fetch(apiConfig.signup, {
         method: "POST",
         body: JSON.stringify(addUser),
         headers: {
